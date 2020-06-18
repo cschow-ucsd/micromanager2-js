@@ -1,0 +1,20 @@
+{
+	"api": {
+		"micromanager2api": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"description": "micromanager2 API Key",
+							"apiKeyExpirationDays": 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
