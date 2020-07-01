@@ -33,7 +33,7 @@
 				"aws:asset:property": "Code"
 			},
 			"Properties": {
-				"Handler": "example.Mm2SolveRequestHandler::handleRequest",
+				"Handler": "example.LambdaRequestHandler::handleRequest",
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
@@ -101,7 +101,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-micromanager2js-dev-160710-deployment",
-					"S3Key": "amplify-builds/mm2solver-48584d5539695a2b4f6b-build.zip"
+					"S3Key": "amplify-builds/mm2solver-4e415354355069694248-build.zip"
 				}
 			}
 		},
@@ -111,12 +111,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"micromanager2jsLambdaRole79d1ea62",
+						"micromanager2jsLambdaRoleb753c113",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"micromanager2jsLambdaRole79d1ea62",
+									"micromanager2jsLambdaRoleb753c113",
 									"-",
 									{
 										"Ref": "env"
