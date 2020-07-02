@@ -1,4 +1,14 @@
+type MmEvent @model {
+  name: String
+  startTime: Int!
+  endTime: Int!
+  duration: Int!
+  schedule: MmSchedule
+  isOpPlanned: Boolean
+}
 type MmSchedule @model {
-  id: ID!
-  name: String!
+  name: String
+  mmUser: String
+  scheduleName: String
+  events: [MmEvent]
 }
