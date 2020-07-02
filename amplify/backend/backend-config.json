@@ -16,5 +16,21 @@
 				}
 			}
 		}
+	},
+	"function": {
+		"mm2solver": {
+			"build": true,
+			"providerPlugin": "awscloudformation",
+			"service": "Lambda",
+			"dependsOn": [
+				{
+					"category": "api",
+					"resourceName": "micromanager2api",
+					"attributes": [
+						"GraphQLAPIIdOutput"
+					]
+				}
+			]
+		}
 	}
 }
