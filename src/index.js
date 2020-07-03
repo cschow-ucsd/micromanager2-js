@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import {API, graphqlOperation} from 'aws-amplify';
+import {getMmSchedule} from "./graphql/queries";
+
+API.graphql(graphqlOperation(getMmSchedule));
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
